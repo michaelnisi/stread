@@ -3,8 +3,7 @@
 
 var stread = require('../')
 
-var str = 'You know what it is to be born alone, Baby tortoise!'
-  , reader = stread(str)
+var reader = stread('You know what it is to be born alone, Baby tortoise!')
   , writer = process.stdout
 
 function write () {
