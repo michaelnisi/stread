@@ -1,0 +1,38 @@
+{
+  "name": "stread",
+  "version": "0.0.1",
+  "description": "stream string",
+  "main": "index.js",
+  "directories": {
+    "example": "example",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "tap test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/michaelnisi/stread.git"
+  },
+  "bugs": {
+    "url": "https://github.com/michaelnisi/stread/issues"
+  },
+  "keywords": [
+    "string",
+    "readable",
+    "stream"
+  ],
+  "devDependencies": {
+    "tap": "0.4.x"
+  },
+  "engines": {
+    "node": "0.11.x",
+    "node": "0.10.x"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Michael Nisi",
+    "email": "michael.nisi@gmail.com",
+    "url": "http://michaelnisi.com"
+  }
+}
