@@ -1,6 +1,6 @@
 {
   "name": "stread",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "stream string",
   "main": "index.js",
   "directories": {
