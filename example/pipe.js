@@ -1,4 +1,3 @@
-
 // pipe - pipe string
 
 var stread = require('../')

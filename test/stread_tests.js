@@ -1,36 +1,33 @@
-
 var test = require('tap').test
-  , Writable = require('stream').Writable
-  , stread = require('../')
+var Writable = require('readable-stream').Writable
+var stread = require('../')
 
 test('pipe', function (t) {
   var str = 'You know what it is to be born alone, Baby tortoise!'
-    , reader = stread(str)
-    , writer = new Writable()
-    , actual = ''
-    , expected = str
+  var reader = stread(str)
+  var writer = new Writable()
+  var actual = ''
+  var expected = str
 
   writer._write = function (chunk, enc, cb) {
     actual += chunk
     cb()
   }
-  reader
-    .pipe(writer)
-    .on('finish', function () {
-      t.is(actual, expected)
-      t.end()
-    })
+  reader.pipe(writer).on('finish', function () {
+    t.is(actual, expected)
+    t.end()
+  })
 })
 
 test('read', function (t) {
   var str = 'You know what it is to be born alone, Baby tortoise!'
-    , reader = stread(str)
-    , actual = ''
-    , expected = str
+  var reader = stread(str)
+  var actual = ''
+  var expected = str
 
   reader.on('readable', function () {
     var chunk = null
-    while (null !== (chunk = reader.read(size()))) {
+    while ((chunk = reader.read(size())) !== null) {
       actual += chunk
     }
   })

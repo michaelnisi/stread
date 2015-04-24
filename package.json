@@ -1,6 +1,6 @@
 {
   "name": "stread",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "stream string",
   "main": "index.js",
   "directories": {
@@ -23,10 +23,9 @@
     "stream"
   ],
   "devDependencies": {
-    "tap": "0.4.x"
+    "tap": "^0.7.1"
   },
   "engines": {
-    "node": "0.11.x",
     "node": "0.10.x"
   },
   "license": "MIT",
@@ -34,5 +33,8 @@
     "name": "Michael Nisi",
     "email": "michael.nisi@gmail.com",
     "url": "http://michaelnisi.com"
+  },
+  "dependencies": {
+    "readable-stream": "^1.0.33"
   }
 }

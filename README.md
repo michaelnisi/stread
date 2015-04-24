@@ -1,13 +1,15 @@
-# stread - stream string 
 
-The stread [Node.js](http://nodejs.org/) module makes a utf-8 encoded string readable through the [stream](http://nodejs.org/api/stream.html) API which can be handy sometimes (while writing tests for streams, for example).
+# stread - stream string
 
-[![Build Status](https://secure.travis-ci.org/michaelnisi/stread.png)](http://travis-ci.org/michaelnisi/stread)
+The **stread** [Node.js](http://nodejs.org/) module makes an utf-8 encoded string readable through the [stream](http://nodejs.org/api/stream.html) API which can be handy sometimes (for example, while writing tests for streams).
+
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+[![Build Status](https://travis-ci.org/michaelnisi/stread.svg)](http://travis-ci.org/michaelnisi/stread)
 
 ## Usage
 
 ### Pipe
-```js    
+```js
 var stread = require('stread')
 
 stread('You know what it is to be born alone, Baby tortoise!')
@@ -19,15 +21,15 @@ stread('You know what it is to be born alone, Baby tortoise!')
 var stread = require('stread')
 
 var reader = stread('You know what it is to be born alone, Baby tortoise!')
-  , writer = process.stdout
+var writer = process.stdout
 
 function write () {
+  var chunk
   var ok = true
-    , chunk = null
-  while (null !== (chunk = reader.read(1)) && ok) {
+  while (ok && (chunk = reader.read(1)) !== null) {
     ok = writer.write(chunk)
   }
-  if (!ok) writer.once('drain', write);
+  if (!ok) writer.once('drain', write)
 }
 
 write()
@@ -42,7 +44,11 @@ Returns a [Readable](http://nodejs.org/api/stream.html#stream_class_stream_reada
 
 ## Installation
 
-[![NPM](https://nodei.co/npm/stread.png)](https://npmjs.org/package/stread)
+With [npm](https://npmjs.org/package/stread) do:
+
+```
+$ npm install stread
+```
 
 ## License
 
