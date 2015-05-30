@@ -1,6 +1,6 @@
 {
   "name": "stread",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "stream string",
   "main": "index.js",
   "directories": {
@@ -23,10 +23,10 @@
     "stream"
   ],
   "devDependencies": {
-    "tap": "^0.7.1"
+    "tap": "^1.2.0"
   },
   "engines": {
-    "node": "0.10.x"
+    "node": ">=0.10"
   },
   "license": "MIT",
   "author": {

@@ -8,6 +8,7 @@ The **stread** [Node.js](http://nodejs.org/) module makes an utf-8 encoded strin
 ## Usage
 
 ### Pipe
+
 ```js
 var stread = require('stread')
 
@@ -16,6 +17,7 @@ stread('You know what it is to be born alone, Baby tortoise!')
 ```
 
 ### Read one octet at a time
+
 ```js
 var stread = require('stread')
 
@@ -23,11 +25,13 @@ var reader = stread('You know what it is to be born alone, Baby tortoise!')
 var writer = process.stdout
 
 function write () {
+  var ok
   var chunk
-  var ok = true
-  while (ok && (chunk = reader.read(1)) !== null) {
-    ok = writer.write(chunk)
-  }
+  do {
+    if ((chunk = reader.read(1)) !== null) {
+      ok = writer.write(chunk)
+    }
+  } while (chunk && ok)
   if (!ok) writer.once('drain', write)
 }
 
