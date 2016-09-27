@@ -1,14 +1,16 @@
 {
   "name": "stread",
-  "version": "2.0.0",
+  "version": "1.0.1",
   "description": "stream string",
   "main": "index.js",
   "directories": {
     "example": "example",
     "test": "test"
   },
+  "files": [
+    "index.js"
+  ],
   "scripts": {
-    "pretest": "standard",
     "test": "tap test/*.js"
   },
   "repository": {
@@ -24,19 +26,19 @@
     "stream"
   ],
   "devDependencies": {
-    "standard": "^8.2.0",
-    "tap": "^7.1.2"
+    "beautify-benchmark": "^0.2.4",
+    "benchmark": "^2.1.1",
+    "seedrandom": "^2.4.2",
+    "tap": "^7.1.2",
+    "readable-stream": "^1.0.33"
   },
   "engines": {
-    "node": ">=4"
+    "node": ">=0.10"
   },
   "license": "MIT",
   "author": {
     "name": "Michael Nisi",
     "email": "michael.nisi@gmail.com",
-    "url": "http://codes.ink"
-  },
-  "dependencies": {
-    "readable-stream": "^2.1.5"
+    "url": "http://michaelnisi.com"
   }
 }
