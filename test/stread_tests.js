@@ -20,14 +20,17 @@ test('pipe', function (t) {
 })
 
 test('read', function (t) {
-  var str = 'You know what it is to be born alone, Baby tortoise!'
+  var str = '';
+  for (var i = 0; i < 400; i++) {
+    str += 'You know what it is to be born alone, Baby tortoise!';
+  }
   var reader = stread(str)
   var actual = ''
   var expected = str
 
   reader.on('readable', function () {
     var chunk = null
-    while ((chunk = reader.read(size())) !== null) {
+    while ((chunk = reader.read()) !== null) {
       actual += chunk
     }
   })
@@ -35,7 +38,4 @@ test('read', function (t) {
     t.is(actual, expected)
     t.end()
   })
-  function size () {
-    return Math.round(Math.random() * 128)
-  }
 })
