@@ -1,9 +1,9 @@
 // read - read one octet at a time
 
-var stread = require('../')
+const stread = require('../')
 
-var reader = stread('You know what it is to be born alone, Baby tortoise!')
-var writer = process.stdout
+const reader = stread('You know what it is to be born alone, Baby tortoise!')
+const writer = process.stdout
 
 function write () {
   var ok

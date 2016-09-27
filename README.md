@@ -1,4 +1,3 @@
-
 # stread - stream string
 
 The **stread** [Node.js](http://nodejs.org/) module makes an utf-8 encoded string readable through the [stream](http://nodejs.org/api/stream.html) API which can be handy sometimes (for example, while writing tests for streams).
