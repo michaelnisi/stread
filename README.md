@@ -1,12 +1,12 @@
 # stread - stream string
 
-The **stread** [Node.js](http://nodejs.org/) module makes an utf-8 encoded string readable through the [stream](http://nodejs.org/api/stream.html) API which can be handy sometimes (for example, while writing tests for streams).
+The **stread** [Node.js](http://nodejs.org/) module makes an utf-8 encoded string readable through the [stream](http://nodejs.org/api/stream.html) API, which can be handy sometimes, while writing tests for streams, for example.
 
 [![Build Status](https://travis-ci.org/michaelnisi/stread.svg)](http://travis-ci.org/michaelnisi/stread)
 
 ## Example
 
-### Piping
+### Piping to a writable stream
 
 ```js
 var stread = require('stread')
@@ -43,7 +43,7 @@ write()
 function stread(str)
 ```
 
-- `str` The `String` to stream
+- `str` The `String` to stream.
 
 Returns a [Readable](http://nodejs.org/api/stream.html#stream_class_stream_readable) stream.
 
