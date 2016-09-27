@@ -4,6 +4,31 @@ The **stread** [Node.js](http://nodejs.org/) module makes an utf-8 encoded strin
 
 [![Build Status](https://travis-ci.org/michaelnisi/stread.svg)](http://travis-ci.org/michaelnisi/stread)
 
+## Why not use PassThrough?
+
+**stread** is more than 2x faster than **PassThrough**:
+
+```
+$ node benchmark.js
+
+Working...
+
+  12 tests completed.
+
+  stread 10           x 57,941 ops/sec ±1.85% (168 runs sampled)
+  PassThrough 10      x 26,209 ops/sec ±1.68% (172 runs sampled)
+  stread 100          x 57,693 ops/sec ±1.46% (172 runs sampled)
+  PassThrough 100     x 26,877 ops/sec ±1.39% (172 runs sampled)
+  stread 1024         x 53,571 ops/sec ±1.25% (172 runs sampled)
+  PassThrough 1024    x 24,631 ops/sec ±1.66% (171 runs sampled)
+  stread 10240        x 30,416 ops/sec ±1.21% (171 runs sampled)
+  PassThrough 10240   x 18,464 ops/sec ±1.67% (166 runs sampled)
+  stread 102400       x  7,676 ops/sec ±1.63% (159 runs sampled)
+  PassThrough 102400  x  7,929 ops/sec ±1.27% (171 runs sampled)
+  stread 1024000      x    908 ops/sec ±1.10% (167 runs sampled)
+  PassThrough 1024000 x    552 ops/sec ±1.47% (171 runs sampled)
+```
+
 ## Example
 
 ### Piping to a writable stream
