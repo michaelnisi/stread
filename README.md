@@ -4,9 +4,9 @@ The **stread** [Node.js](http://nodejs.org/) module makes an utf-8 encoded strin
 
 [![Build Status](https://travis-ci.org/michaelnisi/stread.svg)](http://travis-ci.org/michaelnisi/stread)
 
-## Usage
+## Example
 
-### Pipe
+### Piping
 
 ```js
 var stread = require('stread')
@@ -15,7 +15,7 @@ stread('You know what it is to be born alone, Baby tortoise!')
   .pipe(process.stdout)
 ```
 
-### Read one octet at a time
+### Reading one octet at a time
 
 ```js
 var stread = require('stread')
@@ -36,9 +36,12 @@ function write () {
 
 write()
 ```
-## API
 
-### stread(str)
+## Exports
+
+```js
+function stread(str)
+```
 
 - `str` The `String` to stream
 
@@ -46,7 +49,7 @@ Returns a [Readable](http://nodejs.org/api/stream.html#stream_class_stream_reada
 
 ## Installation
 
-With [npm](https://npmjs.org/package/stread) do:
+With [npm](https://npmjs.org/package/stread), do:
 
 ```
 $ npm install stread
