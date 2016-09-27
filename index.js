@@ -2,7 +2,7 @@
 
 module.exports = stread
 
-const PassThrough = require('readable-stream').PassThrough
+stream.const PassThrough = require('readable-stream').PassThrough
 
 function stread (str) {
   var s = new PassThrough()
