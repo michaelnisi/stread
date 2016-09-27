@@ -40,5 +40,12 @@
     "name": "Michael Nisi",
     "email": "michael.nisi@gmail.com",
     "url": "http://michaelnisi.com"
-  }
+  },
+  "contributors": [
+    {
+      "name": "Alex Gorbatchev",
+      "email": "alex.gorbatchev@gmail.com",
+      "url": "http://github.com/alexgorbatchev"
+    }
+  ]
 }
